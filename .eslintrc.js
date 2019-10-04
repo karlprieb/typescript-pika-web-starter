@@ -6,10 +6,11 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/recommended', // Recommended rules from @typescript-eslint/eslint-plugin
-    'standard' // Recommended rules from StandardJS
+    'standard', // Recommended rules from StandardJS
+    'prettier/@typescript-eslint', // Disable ESLint rules that would conflict with prettier
+    'plugin:prettier/recommended' // Displays prettier errors as ESLint errors
   ],
-  plugins: ['@typescript-eslint'],
-  rules:  {
+  rules: {
     '@typescript-eslint/indent': 'off' // This is the job of StandardJS
-  },
+  }
 };

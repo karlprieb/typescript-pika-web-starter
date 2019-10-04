@@ -11,7 +11,8 @@
     "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
     "type-check": "tsc",
     "type-check:watch": "tsc --watch",
-    "lint:ts": "eslint src/**/*.ts"
+    "lint:ts": "eslint src/**/*.ts",
+    "lint:ts:fix": "eslint src/**/*.ts --fix"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
@@ -23,11 +24,14 @@
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },
   "config": {
