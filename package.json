@@ -6,11 +6,20 @@
   "author": "Karl Prieb <karl@prieb.me>",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build:ts": "babel src --out-dir build --extensions '.ts'",
+    "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
+    "type-check": "tsc",
+    "type-check:watch": "tsc --watch"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.6.0",
     "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "3.0.2"
+    "cz-conventional-changelog": "3.0.2",
+    "typescript": "^3.6.3"
   },
   "config": {
     "commitizen": {

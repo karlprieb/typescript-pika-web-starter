@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    // Basic
+    "target": "esnext", // Target latest version
+    "moduleResolution": "node", // for node_modules
+    "allowJs": true, // Process .js files
+    "noEmit": true, // Don't emit, Babel will transform files
+    "strict": true,
+    "esModuleInterop": true, // Import non-ES modules as default imports
+
+    // Checks
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+
+    // Some colors
+    "pretty": true
+  },
+  "include": [
+    "src" // Your source directory
+  ]
+}

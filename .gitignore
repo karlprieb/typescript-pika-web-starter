@@ -1,5 +1,7 @@
 node_modules
 
 *.log
+build
 
+# No NPM
 package-lock.json
