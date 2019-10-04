@@ -1,0 +1,20 @@
+{
+  "name": "typescript-web-starter",
+  "version": "1.0.0",
+  "description": "Basic Typescript boilerplate for front-end development without bundlers",
+  "repository": "git@github.com:karlprieb/typescript-web-starter.git",
+  "author": "Karl Prieb <karl@prieb.me>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
