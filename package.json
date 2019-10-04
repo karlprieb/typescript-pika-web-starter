@@ -10,15 +10,24 @@
     "build:ts": "babel src --out-dir build --extensions '.ts'",
     "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
     "type-check": "tsc",
-    "type-check:watch": "tsc --watch"
+    "type-check:watch": "tsc --watch",
+    "lint:ts": "eslint src/**/*.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-typescript": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "typescript": "^3.6.3"
   },
   "config": {
