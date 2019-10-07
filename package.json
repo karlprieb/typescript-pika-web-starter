@@ -6,6 +6,7 @@
   "author": "Karl Prieb <karl@prieb.me>",
   "license": "MIT",
   "scripts": {
+    "start": "run-s -l clean:build && run-p -l build:ts:watch copy:assets copy:modules",
     "commit": "git-cz",
     "build:ts": "babel src --out-dir build --extensions '.ts'",
     "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
@@ -16,6 +17,9 @@
     "lint:ts:fix": "eslint src/**/*.ts --fix",
     "test:unit": "jest",
     "test:unit:coverage": "jest --coverage",
+    "copy:assets": "copyfiles -f -a \"./public/*\" ./build/",
+    "copy:modules": "copyfiles \"./web_modules/*.js\" ./build/",
+    "clean:build": "rimraf build",
     "prepare": "pika install"
   },
   "devDependencies": {
@@ -29,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
     "commitizen": "^4.0.3",
+    "copyfiles": "^2.1.1",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
@@ -39,7 +44,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   },
