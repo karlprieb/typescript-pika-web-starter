@@ -3,3 +3,4 @@ web_modules
 
 *.log
 build
+coverage

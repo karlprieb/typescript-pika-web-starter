@@ -14,6 +14,8 @@
     "type-check:watch": "tsc --watch",
     "lint:ts": "eslint src/**/*.ts",
     "lint:ts:fix": "eslint src/**/*.ts --fix",
+    "test:unit": "jest",
+    "test:unit:coverage": "jest --coverage",
     "prepare": "pika install"
   },
   "devDependencies": {
@@ -22,6 +24,7 @@
     "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
     "@pika/web": "^0.6.1",
+    "@types/jest": "^24.0.18",
     "@types/ramda": "^0.26.26",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
@@ -35,7 +38,9 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   },
   "config": {
