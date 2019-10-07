@@ -1,10 +1,4 @@
 module.exports = {
-  presets: [
-    '@babel/preset-typescript',
-    ['@babel/preset-env', {
-      'targets': {
-        'esmodules': true
-      }
-    }]
-  ]
+  presets: ['@babel/preset-typescript'],
+  plugins: ['./babel-plugin-add-import-extension.js', '@pika/web/assets/babel-plugin.js'],
 }

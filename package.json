@@ -9,16 +9,20 @@
     "commit": "git-cz",
     "build:ts": "babel src --out-dir build --extensions '.ts'",
     "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
+    "build:dependencies": "pika install",
     "type-check": "tsc",
     "type-check:watch": "tsc --watch",
     "lint:ts": "eslint src/**/*.ts",
-    "lint:ts:fix": "eslint src/**/*.ts --fix"
+    "lint:ts:fix": "eslint src/**/*.ts --fix",
+    "prepare": "pika install"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
+    "@pika/web": "^0.6.1",
+    "@types/ramda": "^0.26.26",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
     "commitizen": "^4.0.3",
@@ -38,5 +42,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }

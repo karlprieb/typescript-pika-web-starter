@@ -1,6 +1,4 @@
-type double = (value: number) => number
-const double: double = value => {
-  return value * 2
-}
+import { add, double } from './numbers'
 
 console.log(double(4))
+console.log(add(2, 2))
