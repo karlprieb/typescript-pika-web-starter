@@ -6,8 +6,11 @@
   "author": "Karl Prieb <karl@prieb.me>",
   "license": "MIT",
   "scripts": {
-    "start": "run-s -l clean:build && run-p -l build:ts:watch copy:assets:watch copy:modules:watch browsersync",
-    "build": "run-s -l clean:build && run-p -l build:dependencies build:ts copy:assets && run-s -l copy:modules minify:all",
+    "prestart": "run-s -l clean:build ",
+    "start": "run-p -l build:ts:watch copy:assets:watch copy:modules:watch browsersync",
+    "prebuild": "run-s -l clean:build",
+    "build": "run-p -l build:dependencies build:ts copy:assets",
+    "postbuild": "run-s -l copy:modules minify:all",
     "build:ts": "babel src --out-dir build --extensions '.ts'",
     "build:ts:watch": "babel --watch src --out-dir build --extensions '.ts'",
     "build:dependencies": "pika install --clean",
